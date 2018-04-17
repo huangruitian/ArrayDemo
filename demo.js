@@ -1,11 +1,11 @@
 var person = [
-    { name: '王子钰', src: '1.jpg', sex: 'male', des: '漂亮的女孩子' },
-    { name: '张美', src: '2.jpg', sex: 'male', des: '漂亮的程序猿' },
-    { name: '刘新良', src: '3.jpg', sex: 'female', des: '我妈是王美丽' },
-    { name: '唐强', src: '4.jpg', sex: 'female', des: '我喜欢游泳' },
-    { name: '屈婧婧', src: '5.jpg', sex: 'male', des: '我喜欢看电影' },
-    { name: '柯捷', src: '6.jpg', sex: 'female', des: '我也喜欢游泳' },
-    { name: '张宇', src: '7.jpg', sex: 'male', des: '我妈是王美丽' }
+    { name: '王子钰', src: '1.jpg', sex: 'female', des: '漂亮的女孩子' },
+    { name: '张美', src: '2.jpg', sex: 'female', des: '漂亮的程序猿' },
+    { name: '刘新良', src: '3.jpg', sex: 'male', des: '我妈是王美丽' },
+    { name: '唐强', src: '4.jpg', sex: 'male', des: '我喜欢游泳' },
+    { name: '屈婧婧', src: '5.jpg', sex: 'female', des: '我喜欢看电影' },
+    { name: '柯捷', src: '6.jpg', sex: 'male', des: '我也喜欢游泳' },
+    { name: '张宇', src: '7.jpg', sex: 'female', des: '我妈是王美丽' }
     ];
     var inp = document.getElementById('searchIpu');
     var ul = document.getElementById('list');
