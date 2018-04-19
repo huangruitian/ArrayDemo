@@ -99,9 +99,25 @@
             })
         }
     }
-    //inp.oninput
-    inp.oninput = function () {
-        console.log(this.value);
+    //做防抖
+    function debounce(handler,delay) {
+           var timer = null;    //防抖延迟执行，利用setTimeout延时器。
+           return function (e) {//oInp.oninput真正执行的函数。
+            // state.text = this.value;
+            var _self = this,   //this指向oInp。
+                _arg = arguments;//系统会打包源对象传到实参来。
+            clearTimeout(timer); //用户不停的输入删除操作，不超过一秒时。会无限制调用定时器里面的handler。
+                                 //所以在用户不确定的时候，把之前的定时器都清除掉。
+            timer = setTimeout(function(){//延迟执行handler。达到真正的防抖。
+                handler.apply(_self,_arg);//由于有时候被返回的事件处理函数需要用到源对象。所以apply一下。
+                                          //这样写相当于达到oInp.oninput = ajax的效果，并且把源对象传过去。
+            },delay);
+           }
+        }
+
+    inp.oninput = debounce(changeArr,1000); 
+    function changeArr() {
+        // console.log(this.value);
         state.text = this.value;
         render(addFn(objFilter,person)); 
         // render(filterText(text,person)); 
